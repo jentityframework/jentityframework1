@@ -10,3 +10,7 @@
 - [**Donate 15 $**](https://www.paypal.me/jentityframework): I really appreciate your work, let's grab some lunch! 
 - [**Donate 25 $**](https://www.paypal.me/jentityframework): That's some awesome stuff you did right there, dinner is on me!
 - Or you can also [**choose what you want to donate**](https://www.paypal.me/jentityframework), all donations are awesome!
+
+# License
+
+Copyright 2018 Tri Phan
