@@ -12,6 +12,12 @@ With JEntity Framework, you can use Java 8 Lambda Expressions fetch the data fro
 - mysql-connector-java-5.1.36
 - persistence-api-1.0.2
 
+# JPA Annotations
+Current version only works with JPA Annotations as below:
+- @Table
+- @Id
+- @GeneratedValue
+
 # Donations
 **This project needs you!** If you would like to support this project's further development, the creator of this project or the continuous maintenance of this project, **feel free to donate**. Your donation is highly appreciated (and I love food, coffee and beer). Thank you!
 
