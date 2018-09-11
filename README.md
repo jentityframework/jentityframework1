@@ -319,6 +319,33 @@ public class Demo8 {
 }
 ```
 
+- Get Rows with DateTime Conditions:
+```
+package demo;
+
+import java.util.List;
+import entitites.Product;
+import models.MyDemoContext;
+
+public class Demo5 {
+
+	public static void main(String[] args) {
+
+		MyDemoContext db = new MyDemoContext();
+		List<Product> products = db.Products.Where(p -> p.getDateCreated().getYear() == 2018
+				&& p.getDateCreated().getMonthValue() == 8 && p.getDateCreated().getDayOfMonth() == 21).toList();
+		for (Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("date: " + product.getDateCreated());
+			System.out.println("==================");
+		}
+	}
+
+}
+```
+
 - Sum
 
 - Count
