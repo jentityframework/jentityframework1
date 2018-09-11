@@ -1,5 +1,8 @@
 package jentityframework.jdbc;
 
+/**
+ * @author learningprogramming.net
+ */
 import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
