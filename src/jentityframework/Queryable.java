@@ -1,6 +1,7 @@
 package jentityframework;
 
 import java.lang.reflect.Field;
+import java.time.LocalDate;
 import java.util.List;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -100,7 +101,7 @@ public class Queryable<TEntity extends Object> {
 					campos = campos + ",";
 					valores = valores + ",";
 				}
-				if (fields[i].get(entity) instanceof String) {
+				if (fields[i].get(entity) instanceof String || fields[i].get(entity) instanceof LocalDate) {
 					valores = valores + "'" + value + "'";
 				} else {
 					if (!isGeneratedValue) {
