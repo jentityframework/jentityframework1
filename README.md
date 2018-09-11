@@ -180,7 +180,7 @@ public class Demo {
 }
 ```
 
-- Get Rows with Multiple Conditions:
+- **Get Rows with Multiple Conditions**:
 ```
 package demo;
 
@@ -208,7 +208,7 @@ public class Demo {
 }
 ```
 
-- Order By:
+- **Order By**:
 ```
 package demo;
 
@@ -247,7 +247,7 @@ public class Demo {
 }
 ```
 
-- Limit:
+- **Limit**:
 ```
 package demo;
 
@@ -296,7 +296,7 @@ public class Demo {
 }
 ```
 
-- Get A Row:
+- **Get A Row**:
 ```
 package demo;
 
@@ -319,7 +319,7 @@ public class Demo {
 }
 ```
 
-- Get Rows with DateTime Conditions:
+- **Get Rows with DateTime Conditions**:
 ```
 package demo;
 
@@ -346,7 +346,7 @@ public class Demo {
 }
 ```
 
-- Sum
+- **Sum**:
 ```
 package demo;
 
@@ -369,7 +369,7 @@ public class Demo {
 }
 ```
 
-- Count
+- **Count**:
 ```
 package demo;
 
@@ -390,7 +390,7 @@ public class Demo {
 }
 ```
 
-- Min
+- **Min**:
 ```
 package demo;
 
@@ -411,7 +411,7 @@ public class Demo {
 }
 ```
 
-- Max
+- **Max**:
 ```
 package demo;
 
@@ -432,7 +432,7 @@ public class Demo {
 }
 ```
 
-- ###### Avg
+- **Avg**:
 ```
 package demo;
 
