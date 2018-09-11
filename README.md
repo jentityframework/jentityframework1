@@ -30,6 +30,117 @@ Create a database named mydb. This database have Product table as below:
 
 ![Data of Product](http://learningprogramming.net/wp-content/uploads/java/jentityframework/database-data.png)
 
+### Create Entity
+Create new packaged named entities. In this package, create new java class named Product.java as below:
+```
+package entitites;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name = "product")
+public class Product implements Serializable {
+	
+	@Id
+	@GeneratedValue
+	private int id;
+
+	private String description;
+
+	private boolean featured;
+
+	private String name;
+
+	private String photo;
+
+	private BigDecimal price;
+
+	private int quantity;
+
+	private int categoryid;
+
+	private LocalDate dateCreated;
+
+	public LocalDate getDateCreated() {
+		return dateCreated;
+	}
+
+	public void setDateCreated(LocalDate dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public boolean isFeatured() {
+		return featured;
+	}
+
+	public void setFeatured(boolean featured) {
+		this.featured = featured;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public int getCategoryid() {
+		return categoryid;
+	}
+
+	public void setCategoryid(int categoryid) {
+		this.categoryid = categoryid;
+	}
+
+}
+```
+
 # Documents 
 
 # License
