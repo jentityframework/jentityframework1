@@ -1,5 +1,8 @@
 package jentityframework.jdbc;
 
+/**
+ * @author learningprogramming.net
+ */
 public class ConnectionString {
 
 	private String url;
