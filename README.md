@@ -30,6 +30,18 @@ Create a database named mydb. This database have Product table as below:
 
 ![Data of Product](http://learningprogramming.net/wp-content/uploads/java/jentityframework/database-data.png)
 
+### Database Configuration
+Create new json file named appsettings.json in the classpath of your project
+```
+{
+  "connectionString": {
+    "url": "jdbc:mysql://localhost:3306/mydb",
+    "username": "root",
+    "password": "123456"
+  }
+}
+```
+
 ### Create Entity
 Create new package named entities. In this package, create new java class named Product.java as below:
 ```
