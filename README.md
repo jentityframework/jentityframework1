@@ -1,5 +1,5 @@
 # JEntity Framework
-With JEntity Framework, you can use Java 8 Lambda Expressions fetch the data from the underlying database. JEntity Framework supports different types of queries which in turn convert into SQL queries for the underlying database.
+With JEntity Framework, you can use **Java 8 Lambda Expressions** fetch the data from the underlying database. JEntity Framework supports different types of queries which in turn convert into SQL queries for the underlying database.
 
 
 # System Requirements
@@ -13,7 +13,7 @@ With JEntity Framework, you can use Java 8 Lambda Expressions fetch the data fro
 - persistence-api-1.0.2
 
 # JPA Annotations
-Current version only works with JPA Annotations as below:
+Current version only works with **JPA Annotations** as below:
 - @Table
 - @Id
 - @GeneratedValue
