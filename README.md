@@ -152,7 +152,7 @@ public class MyDemoContext  {
 ```
 
 ### Fetch Data From Database
-- Get All Rows
+- Get All Rows:
 ```
 package demo;
 
@@ -180,7 +180,7 @@ public class Demo {
 }
 ```
 
-- Get Rows with Multiple Conditions
+- Get Rows with Multiple Conditions:
 ```
 package demo;
 
@@ -208,7 +208,7 @@ public class Demo {
 }
 ```
 
-- Order By
+- Order By:
 ```
 package demo;
 
@@ -247,7 +247,7 @@ public class Demo {
 }
 ```
 
-- Limit
+- Limit:
 ```
 package demo;
 
@@ -296,7 +296,28 @@ public class Demo {
 }
 ```
 
-- Get A Row
+- Get A Row:
+```
+package demo;
+
+import entitites.Product;
+import models.MyDemoContext;
+
+public class Demo8 {
+
+	public static void main(String[] args) {
+
+		MyDemoContext db = new MyDemoContext();
+		Product product = db.Products.Where(p -> p.getId() == 6).singleOrDefault();
+		System.out.println("id: " + product.getId());
+		System.out.println("name: " + product.getName());
+		System.out.println("price: " + product.getPrice());
+		System.out.println("quantity: " + product.getQuantity());
+
+	}
+
+}
+```
 
 - Sum
 
