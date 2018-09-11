@@ -20,7 +20,7 @@ Current version only works with JPA Annotations as below:
 
 # Examples 
 ### Create Database
-Create a database named **mydb**. This database have Product table as below:
+Create a database named **mydb**. This database have **Product** table as below:
 
 #### Structure of Product Table
 
@@ -31,7 +31,7 @@ Create a database named **mydb**. This database have Product table as below:
 ![Data of Product](http://learningprogramming.net/wp-content/uploads/java/jentityframework/database-data.png)
 
 ### Database Configuration
-Create new json file named appsettings.json in the classpath of your project
+Create new json file named **appsettings.json** in the classpath of your project
 ```
 {
   "connectionString": {
@@ -43,7 +43,7 @@ Create new json file named appsettings.json in the classpath of your project
 ```
 
 ### Create Entity
-Create new package named entities. In this package, create new java class named Product.java as below:
+Create new package named **entities**. In this package, create new java class named **Product.java** as below:
 ```
 package entitites;
 
@@ -133,7 +133,7 @@ public class Product implements Serializable {
 ```
 
 ### Create Database Context
-Create new package named models. In this package, create new java class named MyDemoContext.java as below:
+Create new package named **models**. In this package, create new java class named **MyDemoContext.java** as below:
 ```
 package models;
 
@@ -152,7 +152,7 @@ public class MyDemoContext  {
 ```
 
 ### Fetch Data From Database
-- Get All Rows:
+- **Get All Rows**:
 ```
 package demo;
 
