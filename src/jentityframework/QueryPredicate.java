@@ -1,9 +1,10 @@
 package jentityframework;
 
+/**
+ * @author learningprogramming.net
+ */
 import java.util.List;
-
 import javax.persistence.Table;
-
 import jentityframework.jdbc.JDBCQueryable;
 import jentityframework.lamdasql.Lambda2Sql;
 import jentityframework.lamdasql.SqlPredicate;
