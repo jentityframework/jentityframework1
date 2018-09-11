@@ -453,6 +453,36 @@ public class Demo {
 }
 ```
 
+- **Insert**:
+```
+package demo;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import entitites.Product;
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		MyDemoContext db = new MyDemoContext();
+		Product product = new Product();
+		product.setName("Tablet 1");
+		product.setPrice(BigDecimal.valueOf(120.5));
+		product.setQuantity(5);
+		product.setStatus(true);
+		product.setDateCreated(LocalDate.now());
+		product.setDescription("Description of Tablet 1");
+		long id = (long) db.Products.insert(product);
+		System.out.println("id: " + id);
+
+	}
+
+}
+```
+
+
 # Documents 
 
 # License
