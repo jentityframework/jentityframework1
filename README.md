@@ -5,6 +5,8 @@ With JEntity Framework, you can use Lambda Expressions in Java 8 fetch the data 
 # System Requirements
 Java 8 or Above
 
+# Required Libraries
+
 # Donations
 **This project needs you!** If you would like to support this project's further development, the creator of this project or the continuous maintenance of this project, **feel free to donate**. Your donation is highly appreciated (and I love food, coffee and beer). Thank you!
 
