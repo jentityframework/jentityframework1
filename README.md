@@ -172,6 +172,23 @@ public class MyDemoContext  {
 }
 ```
 
+### Fetch Data From Database
+- Get All Rows
+
+- Get Rows with Multiple Conditions
+
+- Get A Row
+
+- Sum
+
+- Count
+
+- Min
+
+- Max
+
+- Avg
+
 # Documents 
 
 # License
