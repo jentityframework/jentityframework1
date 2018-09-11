@@ -31,7 +31,7 @@ Create a database named mydb. This database have Product table as below:
 ![Data of Product](http://learningprogramming.net/wp-content/uploads/java/jentityframework/database-data.png)
 
 ### Create Entity
-Create new packaged named entities. In this package, create new java class named Product.java as below:
+Create new package named entities. In this package, create new java class named Product.java as below:
 ```
 package entitites;
 
@@ -138,6 +138,25 @@ public class Product implements Serializable {
 		this.categoryid = categoryid;
 	}
 
+}
+```
+
+### Create Database Context
+Create new package named models. In this package, create new java class named MyDemoContext.java as below:
+```
+package models;
+
+import entitites.Product;
+import jentityframework.DbSet;
+
+public class MyDemoContext  {
+
+	public DbSet<Product> Products;
+	
+	public MyDemoContext() {
+		Products = new DbSet<Product>(Product.class);
+	}
+	
 }
 ```
 
