@@ -3,9 +3,14 @@ With JEntity Framework, you can use Lambda Expressions in Java 8 fetch the data 
 
 
 # System Requirements
-Java 8 or Above
+- Java 8 or Above
 
 # Required Libraries
+- asm-all-5.2
+- gson-2.8.5
+- jaque-2.1.0
+- mysql-connector-java-5.1.36
+- persistence-api-1.0.2
 
 # Donations
 **This project needs you!** If you would like to support this project's further development, the creator of this project or the continuous maintenance of this project, **feel free to donate**. Your donation is highly appreciated (and I love food, coffee and beer). Thank you!
