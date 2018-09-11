@@ -20,7 +20,7 @@ Current version only works with JPA Annotations as below:
 
 # Examples 
 ### Database
-<img src="http://learningprogramming.net/wp-content/uploads/java/jentityframework/database-data.png">
+![Data of Product](http://learningprogramming.net/wp-content/uploads/java/jentityframework/database-data.png)
 
 # Documents 
 
