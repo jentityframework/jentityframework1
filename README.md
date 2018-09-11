@@ -25,4 +25,4 @@ With JEntity Framework, you can use Lambda Expressions in Java 8 fetch the data 
 
 # License
 
-Copyright 2018 Tri Phan
+Copyright 2018 LearningProgramming.NET
