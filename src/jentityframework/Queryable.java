@@ -1,11 +1,13 @@
 package jentityframework;
 
+/**
+ * @author learningprogramming.net
+ */
 import java.lang.reflect.Field;
 import java.time.LocalDate;
 import java.util.List;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
 import jentityframework.jdbc.JDBCQueryable;
 import jentityframework.lamdasql.SqlPredicate;
 
