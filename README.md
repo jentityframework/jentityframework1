@@ -152,7 +152,7 @@ public class MyDemoContext  {
 ```
 
 ### Fetch Data From Database
-- ####Get All Rows:
+- Get All Rows:
 ```
 package demo;
 
@@ -303,7 +303,7 @@ package demo;
 import entitites.Product;
 import models.MyDemoContext;
 
-public class Demo8 {
+public class Demo {
 
 	public static void main(String[] args) {
 
@@ -327,7 +327,7 @@ import java.util.List;
 import entitites.Product;
 import models.MyDemoContext;
 
-public class Demo5 {
+public class Demo {
 
 	public static void main(String[] args) {
 
@@ -347,14 +347,111 @@ public class Demo5 {
 ```
 
 - Sum
+```
+package demo;
+
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		MyDemoContext db = new MyDemoContext();
+		double result1 = db.Products.sum("quantity");
+		System.out.println("Result 1: " + result1);
+		double result2 = db.Products.sum("price* quantity");
+		System.out.println("Result 2: " + result2);
+		double result3 = db.Products.Where(p -> p.isStatus()).sum("price* quantity");
+		System.out.println("Result 3: " + result3);
+
+	}
+
+}
+```
 
 - Count
+```
+package demo;
+
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		MyDemoContext db = new MyDemoContext();
+		long result1 = db.Products.count();
+		System.out.println("Result 1: " + result1);
+		long result2 = db.Products.Where(p -> p.isStatus()).count();
+		System.out.println("Result 2: " + result2);
+
+	}
+
+}
+```
 
 - Min
+```
+package demo;
+
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		MyDemoContext db = new MyDemoContext();
+		double min1 = db.Products.min("price");
+		System.out.println("Min 1: " + min1);
+		double min2 = db.Products.Where(p -> p.isStatus()).min("price");
+		System.out.println("Min 2: " + min2);
+
+	}
+
+}
+```
 
 - Max
+```
+package demo;
+
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		MyDemoContext db = new MyDemoContext();
+		double max1 = db.Products.max("price");
+		System.out.println("Max 1: " + max1);
+		double max2 = db.Products.Where(p -> p.isStatus()).max("price");
+		System.out.println("Max 2: " + max2);
+
+	}
+
+}
+```
 
 - Avg
+```
+package demo;
+
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		MyDemoContext db = new MyDemoContext();
+		double avg1 = db.Products.avg("price");
+		System.out.println("Avg 1: " + avg1);
+		double avg2 = db.Products.Where(p -> p.isStatus()).avg("price");
+		System.out.println("Avg 2: " + avg2);
+
+	}
+
+}
+```
 
 # Documents 
 
