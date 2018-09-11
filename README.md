@@ -50,41 +50,28 @@ package entitites;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table(name = "product")
 public class Product implements Serializable {
-	
+
 	@Id
 	@GeneratedValue
 	private int id;
 
-	private String description;
-
-	private boolean featured;
-
 	private String name;
-
-	private String photo;
 
 	private BigDecimal price;
 
 	private int quantity;
 
-	private int categoryid;
+	private String description;
+
+	private boolean status;
 
 	private LocalDate dateCreated;
-
-	public LocalDate getDateCreated() {
-		return dateCreated;
-	}
-
-	public void setDateCreated(LocalDate dateCreated) {
-		this.dateCreated = dateCreated;
-	}
 
 	public int getId() {
 		return id;
@@ -94,36 +81,12 @@ public class Product implements Serializable {
 		this.id = id;
 	}
 
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public boolean isFeatured() {
-		return featured;
-	}
-
-	public void setFeatured(boolean featured) {
-		this.featured = featured;
-	}
-
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getPhoto() {
-		return photo;
-	}
-
-	public void setPhoto(String photo) {
-		this.photo = photo;
 	}
 
 	public BigDecimal getPrice() {
@@ -142,12 +105,28 @@ public class Product implements Serializable {
 		this.quantity = quantity;
 	}
 
-	public int getCategoryid() {
-		return categoryid;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setCategoryid(int categoryid) {
-		this.categoryid = categoryid;
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+
+	public LocalDate getDateCreated() {
+		return dateCreated;
+	}
+
+	public void setDateCreated(LocalDate dateCreated) {
+		this.dateCreated = dateCreated;
 	}
 
 }
@@ -174,8 +153,89 @@ public class MyDemoContext  {
 
 ### Fetch Data From Database
 - Get All Rows
+```
+package demo;
+
+import java.util.List;
+import entitites.Product;
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		MyDemoContext db = new MyDemoContext();
+		List<Product> products = db.Products.toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("quantity: " + product.getQuantity());
+			System.out.println("====================");
+		}
+
+	}
+
+}
+```
 
 - Get Rows with Multiple Conditions
+```
+package demo;
+
+import java.util.List;
+import entitites.Product;
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		MyDemoContext db = new MyDemoContext();
+		List<Product> products = db.Products.Where(p -> p.getQuantity() >= 5 && p.getQuantity() <= 20 && p.isStatus()).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("quantity: " + product.getQuantity());
+			System.out.println("====================");
+		}
+
+	}
+
+}
+```
+
+- Order By
+```
+package demo;
+
+import java.util.List;
+import entitites.Product;
+import jentityframework.OrderBy;
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		MyDemoContext db = new MyDemoContext();
+		List<Product> products = db.Products.orderBy("price", OrderBy.DESC).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("quantity: " + product.getQuantity());
+			System.out.println("====================");
+		}
+
+	}
+
+}
+```
 
 - Get A Row
 
