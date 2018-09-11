@@ -55,10 +55,16 @@ public class JDBCQueryable<T extends Object> {
 				int countColumns = resultSetMetaData.getColumnCount();
 				for (int i = 1; i <= countColumns; i++) {
 					String columnName = resultSetMetaData.getColumnName(i);
+					String columnType = resultSetMetaData.getColumnTypeName(i);
 					Field field = clazz.getDeclaredField(columnName);
 					field.setAccessible(true);
 					Object value = resultSet.getObject(i);
-					field.set(objectInstance, value);
+					if (columnType.equalsIgnoreCase("datetime") || columnType.equalsIgnoreCase("date")) {
+						LocalDate localDate = new java.sql.Date(((java.util.Date)value).getTime()).toLocalDate();
+						field.set(objectInstance, localDate);
+					} else {
+						field.set(objectInstance, value);
+					}
 				}
 				result.add((T) objectInstance);
 			}
