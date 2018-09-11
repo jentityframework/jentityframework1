@@ -231,7 +231,66 @@ public class Demo {
 			System.out.println("quantity: " + product.getQuantity());
 			System.out.println("====================");
 		}
+		
+		products = db.Products.Where(p -> p.isStatus()).orderBy("price", OrderBy.DESC).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("quantity: " + product.getQuantity());
+			System.out.println("====================");
+		}
+		
+	}
 
+}
+```
+
+- Limit
+```
+package demo;
+
+import java.util.List;
+import entitites.Product;
+import jentityframework.OrderBy;
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		MyDemoContext db = new MyDemoContext();
+		List<Product> products = db.Products.skip(0).take(2).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("quantity: " + product.getQuantity());
+			System.out.println("====================");
+		}
+		
+		products = db.Products.Where(p -> p.isStatus()).skip(0).take(2).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("quantity: " + product.getQuantity());
+			System.out.println("====================");
+		}
+		
+		products = db.Products.orderBy("price", OrderBy.DESC).skip(0).take(2).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("quantity: " + product.getQuantity());
+			System.out.println("====================");
+		}
+		
 	}
 
 }
