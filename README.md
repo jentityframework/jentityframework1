@@ -482,6 +482,54 @@ public class Demo {
 }
 ```
 
+- **Update**:
+```
+package demo;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import entitites.Product;
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		MyDemoContext db = new MyDemoContext();
+		Product product = db.Products.Where(p -> p.getId() == 6).singleOrDefault();
+		product.setName("ABC");
+		product.setPrice(BigDecimal.valueOf(45.5));
+		product.setQuantity(5);
+		product.setStatus(false);
+		product.setDateCreated(LocalDate.of(2018, 11, 24));
+		boolean result = db.Products.update(product) > 0;
+		System.out.println("result: " + result);
+
+	}
+
+}
+```
+
+- **Delete**:
+```
+package demo;
+
+import entitites.Product;
+import models.MyDemoContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		MyDemoContext db = new MyDemoContext();
+		Product product = db.Products.Where(p -> p.getId() == 6).singleOrDefault();
+		boolean result = db.Products.delete(product) > 0;
+		System.out.println("result: " + result);
+
+	}
+
+}
+```
 
 # Documents 
 
