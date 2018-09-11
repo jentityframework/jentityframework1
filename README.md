@@ -1,5 +1,8 @@
 # JEntityFramework
 
+# Requirements
+Java 8 or Above
+
 # Donations
 **This project needs you!** If you would like to support this project's further development, the creator of this project or the continuous maintenance of this project, **feel free to donate**. Your donation is highly appreciated (and I love food, coffee and beer). Thank you!
 
