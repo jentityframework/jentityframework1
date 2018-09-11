@@ -532,6 +532,7 @@ public class Demo {
 ```
 
 # Documents 
+See more examples with JEntity Framework at [learningprogramming.net](http://learningprogramming.net)
 
 # License
 
