@@ -1,4 +1,6 @@
-# JEntityFramework
+# JEntity Framework
+You can build and execute queries using JEntity Framework to fetch the data from the underlying database. JEntity Framework supports different types of queries which in turn convert into SQL queries for the underlying database.
+
 
 # Requirements
 Java 8 or Above
