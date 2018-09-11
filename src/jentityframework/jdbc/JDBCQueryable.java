@@ -1,5 +1,8 @@
 package jentityframework.jdbc;
 
+/**
+ * @author learningprogramming.net
+ */
 import java.lang.reflect.Field;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
