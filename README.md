@@ -19,7 +19,11 @@ Current version only works with JPA Annotations as below:
 - @GeneratedValue
 
 # Examples 
-### Database
+### Create Database
+Create a database named mydb. This database have Product table as below:
+Structure of Product Table
+![Data of Product](http://learningprogramming.net/wp-content/uploads/java/jentityframework/database-structure.png)
+Data of Product Table
 ![Data of Product](http://learningprogramming.net/wp-content/uploads/java/jentityframework/database-data.png)
 
 # Documents 
