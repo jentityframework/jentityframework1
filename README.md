@@ -1,5 +1,5 @@
 # JEntity Framework
-With JEntity Framework, you can use Lambda Expressions in Java 8 fetch the data from the underlying database. JEntity Framework supports different types of queries which in turn convert into SQL queries for the underlying database.
+With JEntity Framework, you can use Java 8 Lambda Expressions fetch the data from the underlying database. JEntity Framework supports different types of queries which in turn convert into SQL queries for the underlying database.
 
 
 # System Requirements
