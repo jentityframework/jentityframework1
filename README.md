@@ -20,7 +20,7 @@ Current version only works with JPA Annotations as below:
 
 # Examples 
 ### Create Database
-Create a database named mydb. This database have Product table as below:
+Create a database named **mydb**. This database have Product table as below:
 
 #### Structure of Product Table
 
