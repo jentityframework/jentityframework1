@@ -431,6 +431,35 @@ public class Demo {
 }
 ```
 
+- **Get Rows with BigDecimal Conditions**:
+```
+package demo;
+
+import java.util.List;
+import entities.Product;
+import models.MyDBContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		MyDBContext db = new MyDBContext();
+		List<Product> products = db.Products.Where(p -> p.getPrice().compareTo(null) >= 20 && p.getPrice().compareTo(null) <= 100).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("status: " + product.isStatus());
+			System.out.println("date: " + product.getDateCreated());
+			System.out.println("====================");
+		}
+		
+	}
+
+}
+```
+
 - **Sum**:
 ```
 package demo;
