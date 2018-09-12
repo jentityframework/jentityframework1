@@ -392,6 +392,40 @@ public class Demo {
 			System.out.println("date: " + product.getDateCreated());
 			System.out.println("==================");
 		}
+		
+		products = db.Products.Where(p -> p.getDateCreated().isAfter(LocalDate.of(2018, 10, 20))).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("status: " + product.isStatus());
+			System.out.println("date: " + product.getDateCreated());
+			System.out.println("====================");
+		}
+		
+		products = db.Products.Where(p -> p.getDateCreated().isBefore(LocalDate.of(2018, 10, 20))).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("status: " + product.isStatus());
+			System.out.println("date: " + product.getDateCreated());
+			System.out.println("====================");
+		}
+		
+		products = db.Products.Where(p -> p.getDateCreated().equals(LocalDate.of(2018, 10, 20))).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("status: " + product.isStatus());
+			System.out.println("date: " + product.getDateCreated());
+			System.out.println("====================");
+		}
+		
 	}
 
 }
