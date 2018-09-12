@@ -208,6 +208,57 @@ public class Demo {
 }
 ```
 
+- **Like**:
+```
+package demo;
+
+import java.util.List;
+import entities.Product;
+import models.MyDBContext;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		MyDBContext db = new MyDBContext();
+		List<Product> products = db.Products.Where(p -> p.getName().endsWith("1")).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("status: " + product.isStatus());
+			System.out.println("date: " + product.getDateCreated());
+			System.out.println("====================");
+		}
+		
+		products = db.Products.Where(p -> p.getName().startsWith("lap")).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("status: " + product.isStatus());
+			System.out.println("date: " + product.getDateCreated());
+			System.out.println("====================");
+		}
+		
+		products = db.Products.Where(p -> p.getName().contains("lap")).toList();
+		System.out.println("Products: " + products.size());
+		for(Product product : products) {
+			System.out.println("id: " + product.getId());
+			System.out.println("name: " + product.getName());
+			System.out.println("price: " + product.getPrice());
+			System.out.println("status: " + product.isStatus());
+			System.out.println("date: " + product.getDateCreated());
+			System.out.println("====================");
+		}
+
+	}
+
+}
+```
+
 - **Order By**:
 ```
 package demo;
