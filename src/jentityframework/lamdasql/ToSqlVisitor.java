@@ -69,7 +69,9 @@ public class ToSqlVisitor implements ExpressionVisitor<StringBuilder> {
 	@Override
 	public StringBuilder visit(MemberExpression e) {
 		String name = "";
-		if (e.toString().contains("isBefore")) {
+		if (e.getInstance().getResultType().getName().equalsIgnoreCase("java.time.LocalDate")
+				&& body.getClass().getTypeName().contains("InvocationExpression")
+				&& e.toString().contains("isBefore")) {
 			Pattern pattern = Pattern.compile(".{4},\\s+.{1,2},\\s+.{1,2}");
 			Matcher matcher = pattern.matcher(body.toString());
 			matcher.find();
@@ -79,7 +81,8 @@ public class ToSqlVisitor implements ExpressionVisitor<StringBuilder> {
 			name = name.substring(0, 1).toLowerCase() + name.substring(1);
 			name = name.replace("(", "").replace(")", "");
 			name = name + " < " + date + " ";
-		} else if (e.toString().contains("isAfter")) {
+		} else if (e.getInstance().getResultType().getName().equalsIgnoreCase("java.time.LocalDate")
+				&& body.getClass().getTypeName().contains("InvocationExpression") && e.toString().contains("isAfter")) {
 			Pattern pattern = Pattern.compile(".{4},\\s+.{1,2},\\s+.{1,2}");
 			Matcher matcher = pattern.matcher(body.toString());
 			matcher.find();
@@ -89,7 +92,9 @@ public class ToSqlVisitor implements ExpressionVisitor<StringBuilder> {
 			name = name.substring(0, 1).toLowerCase() + name.substring(1);
 			name = name.replace("(", "").replace(")", "");
 			name = name + " > " + date + " ";
-		} else if (body.toString().contains("java.time.LocalDate") && body.toString().contains("equals")) {
+		} else if (e.getInstance().getResultType().getName().equalsIgnoreCase("java.time.LocalDate")
+				&& body.getClass().getTypeName().contains("InvocationExpression")
+				&& body.toString().contains("equals")) {
 			Pattern pattern = Pattern.compile(".{4},\\s+.{1,2},\\s+.{1,2}");
 			Matcher matcher = pattern.matcher(body.toString());
 			matcher.find();
@@ -99,9 +104,7 @@ public class ToSqlVisitor implements ExpressionVisitor<StringBuilder> {
 			name = name.substring(0, 1).toLowerCase() + name.substring(1);
 			name = name.replace("(", "").replace(")", "");
 			name = name + " = " + date + " ";
-		}
-
-		else if (e.toString().contains("getYear")) {
+		} else if (e.toString().contains("getYear")) {
 			String[] s = e.toString().split("\\.");
 			name = s[1].replaceAll("^(get)", "");
 			name = name.substring(0, 1).toLowerCase() + name.substring(1);
