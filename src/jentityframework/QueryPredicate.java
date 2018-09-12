@@ -69,7 +69,7 @@ public class QueryPredicate<TEntity extends Object> {
 
 	public double sum(String fieldName) {
 		JDBCQueryable<TEntity> jdbcQueryable = new JDBCQueryable<TEntity>();
-		this.maxFieldName = fieldName;
+		this.sumFieldName = fieldName;
 		return jdbcQueryable.sumOrMinOrMaxOrAvg(this.buildSQL());
 	}
 
