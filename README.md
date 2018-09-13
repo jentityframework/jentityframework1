@@ -1,7 +1,7 @@
 # JEntity Framework
 **JEntity Framework** stands for **Java Entity Framework**. With **JEntity Framework**, you can use **Java 8 Lambda Expressions** fetch the data from the underlying database. **JEntity Framework** supports different types of queries which in turn convert into SQL queries for the underlying database.
 
-# Documents And Examples
+# Documents and Examples
 See more examples with JEntity Framework at [http://learningprogramming.net/java/jentity-framework](http://learningprogramming.net/java/jentity-framework)
 
 # System Requirements
