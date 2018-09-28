@@ -478,9 +478,9 @@ public class Demo {
 		MyDemoContext db = new MyDemoContext();
 		double result1 = db.Products.sum("quantity");
 		System.out.println("Result 1: " + result1);
-		double result2 = db.Products.sum("price* quantity");
+		double result2 = db.Products.sum("price * quantity");
 		System.out.println("Result 2: " + result2);
-		double result3 = db.Products.Where(p -> p.isStatus()).sum("price* quantity");
+		double result3 = db.Products.Where(p -> p.isStatus()).sum("price * quantity");
 		System.out.println("Result 3: " + result3);
 
 	}
