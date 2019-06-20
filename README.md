@@ -7,6 +7,9 @@ Download jar files of JEntity Framework at [http://learningprogramming.net/java/
 # Documents and Examples
 See more examples with JEntity Framework at [http://learningprogramming.net/java/jentity-framework](http://learningprogramming.net/java/jentity-framework)
 
+# Free Online Tools For Developers
+Use Free Online Tools For Developers at [http://octopuscodes.com/](http://octopuscodes.com/)
+
 # System Requirements
 - Java 8 or Above
 
